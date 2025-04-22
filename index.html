@@ -12,13 +12,19 @@
       </head>
       <body style="margin: 0;">
         <portfolio-sidebar-theme>
-          <portfolio-screen name="about" title="About"> </portfolio-screen>
-            <p>Hello! My name is Daniela Alarcon</p>
-          </portfolio-screen>
-          <portfolio-screen name="projects" title="Projects" ></portfolio-screen>
-            <p>These are some of my projects.</p>
-          </portfolio-screen>
-      
+          <portfolio-screen name="who-i-am" title="Who I am"> 
+            <section class="who-i-am-section">
+              <img src="./profile.jpg" alt="Photo of Daniela Alarcon" class="profile-photo" />
+              <div class="intro-content">
+                <h2>I am a Cybersecurity Student</h2>
+                  <p>
+                    My background is in cybersecurity and analytics. I’m currently pursuing a bacehlor's degree 
+                    at Penn State in Cybersecurity with a minor in Security Risk Analysis, and I'm passionate about defending 
+                    systems and improving safety online.
+                  </p>
+                </div>
+              </div>
+            </section>
           <portfolio-screen name="skills" title="Skills" ></portfolio-screen>
             <p>Here are my skills.</p>
           </portfolio-screen>
@@ -29,6 +35,7 @@
             <p>Contact me through this form.</p>
           </portfolio-screen>
         </portfolio-sidebar-theme>
+      <div id="contact">HElllllo</div>
       </body>
       
      
@@ -44,35 +51,16 @@
         margin: 0;
         padding: 0;
       }
-      #demo {
-        margin: var(--ddd-spacing-2);
-      }
-      portfolio-sidebar-theme {
-        margin: var(--ddd-spacing-2);
-        border: var(--ddd-border-md);
-        border-radius: var(--ddd-radius-lg);
-      }
-      portfolio-sidebar-theme:hover {
-        box-shadow: var(--ddd-boxShadow-sm);
-      }
-      #example {
-        --portfolio-sidebar-theme-font-size: var(--ddd-font-size-l);
-        background-color: var(--ddd-accent-2);
-        color: var(--ddd-primary-17);
-      }
+      img {
+          width: 300px;
+        }
     </style>
     <title>portfolio-sidebar-theme</title>
   </head>
 
   <body>
-    <div id="demo">
-      <h1>portfolio-sidebar-theme</h1>
-      <!-- this is going to do whatever the tag's defaults are -->
-      <h2>Default</h2>
-      <portfolio-sidebar-theme></portfolio-sidebar-theme>
-    </div>
+    
     <script type="module" src="./portfolio-sidebar-theme.js"></script>
-
-    <!-- Take HAX, the Web and you further down the rabbit hole -->
+    <script type="module" src="./portfolio-menu.js"></script>
   </body>
 </html>
