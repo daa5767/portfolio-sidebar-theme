@@ -6,6 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./portfolio-menu.js";
+import "@haxtheweb/scroll-button/scroll-button.js"
 
 /**
  * `portfolio-sidebar-theme`
@@ -21,10 +22,10 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.sections = [
-      { name: "who-i-am", title: "Who I am" },
-      { name: "skills", title: "Skills" },
-      { name: "experience", title: "Experience" },
-      { name: "contact", title: "Contact" },
+      { title: "Who I am" },
+      { title: "Skills" },
+      { title: "Experience" },
+      { title: "Contact" },
     ];
   }
 
@@ -36,11 +37,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         :host {
           display: flex;
           height: 100vh;
-          overflow: hidden;
-        }
-
-        img {
-          width: 300px;
+          overflow-x: hidden;
         }
 
         a:visited,
@@ -64,18 +61,17 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
           width: 200px;
           border-radius: 10px;
         }
-
-        .who-i-am {
-          display: flex;
-          align-items: center;
-          gap: 2rem;
-          padding: 2rem;
-        }
-        .intro-content {
-          max-width: 600px;
-        }
+       
         .content {
           margin-left: 300px;
+        }
+        scroll-button{
+          position: fixed;
+          right: 0;
+          bottom: 0;
+        }
+        html {
+        scroll-behavior: smooth;
         }
       `,
     ];
@@ -86,16 +82,22 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
       <portfolio-menu>
-        ${this.sections.map((s) => html` <a href="#${s.name}">${s.title}</a> `)}
+        ${this.sections.map((s) => {
+          const id = s.title.toLowerCase().replace(/\s+/g, '-');
+          return html`<a href="#${id}">${s.title}</a>`;
+        })}
+        <!-- <img src="./profile.jpg" alt="Photo of Daniela Alarcon" /> -->
       </portfolio-menu>
+  
       <div class="content" id="scroll-container">
         <slot></slot>
       </div>
+  
+      <scroll-button></scroll-button>
     `;
-  }
-}
+  }}
 
-globalThis.customElements.define(
+   globalThis.customElements.define(
   PortfolioSidebarTheme.tag,
   PortfolioSidebarTheme
-);
+);  

@@ -9,33 +9,49 @@
       <title> My Portfolio</title>
       <script type="module" src="./portfolio-sidebar-theme.js"></script>
       <script type="module" src="./portfolio-screen.js"></script>
+      <script type="module" src="./portfolio-menu.js"></script>
       </head>
       <body style="margin: 0;">
         <portfolio-sidebar-theme>
-          <portfolio-screen name="who-i-am" title="Who I am"> 
-            <section class="who-i-am-section">
-              <img src="./profile.jpg" alt="Photo of Daniela Alarcon" class="profile-photo" />
-              <div class="intro-content">
-                <h2>I am a Cybersecurity Student</h2>
-                  <p>
-                    My background is in cybersecurity and analytics. I’m currently pursuing a bacehlor's degree 
-                    at Penn State in Cybersecurity with a minor in Security Risk Analysis, and I'm passionate about defending 
-                    systems and improving safety online.
-                  </p>
+          <portfolio-screen title="Who I am" id="who-i-am" image="profile.jpg"> 
+            <section class="container">
+              <div class="introduction">
+                <div class="header">                    
+                  <h2>Hello! My Name is Daniela Alarcon</h2>
                 </div>
+                <p class="description">
+                  My background is in cybersecurity and analytics. I’m currently pursuing a bachelor's degree 
+                  at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, while focusing on Law and Policy.
+                  I'm passionate about defending systems and improving safety online.
+                </p>
+              </div>
+              <img src="profile.jpg" alt="pic" class="profile-photo" />
+            </section>
+          </portfolio-screen>
+          
+          <portfolio-screen title="Skills" id="skills">
+            <section class="container">
+              <div class="introduction">
+                <div class="header">                    
+                  <h2>My Skills</h2>
+                </div>
+                <p class="description">
+                  Proficient in Windows, Linux, Microsoft Office, Excel, LAN and WAN networking, JavaScript, Python, Bash scripting, 
+                  Wireshark, MySQL, and JSON. Skilled in using both graphical and command-line environments, with strong capabilities 
+                  in troubleshooting and data analysis. Bilingual in Spanish (native) and English (proficient), enabling effective 
+                  communication in diverse technical environments.
+                </p>
               </div>
             </section>
-          <portfolio-screen name="skills" title="Skills" ></portfolio-screen>
-            <p>Here are my skills.</p>
           </portfolio-screen>
-          <portfolio-screen name="experience" title="Experience" ></portfolio-screen>
+
+          <portfolio-screen title="Experience" id="experience">
             <p>This is my experience.</p>
           </portfolio-screen>
-          <portfolio-screen name="contact" title="Contact" > </portfolio-screen>
+          
+          <portfolio-screen title="Contact" id="contact">
             <p>Contact me through this form.</p>
           </portfolio-screen>
-        </portfolio-sidebar-theme>
-      <div id="contact">HElllllo</div>
       </body>
       
      
@@ -51,9 +67,33 @@
         margin: 0;
         padding: 0;
       }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        padding-right: 100px;
+        
+      }
+      .header {
+        margin-top: 0%;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+
+      }
+      .description {
+        text-align: center;
+        padding-right: 40px;
+
+      }
       img {
-          width: 300px;
+          max-width: 400px;
+          margin: auto;
         }
+
     </style>
     <title>portfolio-sidebar-theme</title>
   </head>
@@ -62,5 +102,6 @@
     
     <script type="module" src="./portfolio-sidebar-theme.js"></script>
     <script type="module" src="./portfolio-menu.js"></script>
+    <script type="module" src="./portfolio-screen.js"></script>
   </body>
 </html>
