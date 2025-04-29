@@ -35,9 +35,8 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
       super.styles,
       css`
         :host {
-          display: flex;
+          display: block;
           height: 100vh;
-          overflow-x: hidden;
         }
 
         a:visited,
@@ -98,7 +97,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         <!-- <img src="./profile.jpg" alt="Photo of Daniela Alarcon" /> -->
       </portfolio-menu>
   
-      <div class="content" id="scroll-container">
+      <div class="content"></div>
         <slot></slot>
         <scroll-button></scroll-button>
       </div>

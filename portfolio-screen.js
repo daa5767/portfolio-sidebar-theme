@@ -29,7 +29,6 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
         :host {
           display: flex;
           height: 100vh;
-          overflow-x: hidden;
         }
 
         ::slotted(img) {
@@ -83,7 +82,7 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
 
   render() {
     return html`
-      <div class="content" id="scroll-container">
+      <div class="content" > </div>
         <slot></slot>
       </div>
     `;
