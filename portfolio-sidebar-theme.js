@@ -23,7 +23,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     super();
     this.sections = [
       { title: "Who I am" },
-      { title: "Skills" },
+      { title: "Resume" },
       { title: "Experience" },
       { title: "Contact" },
     ];
@@ -59,7 +59,10 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         }
         .profile-photo {
           width: 200px;
-          border-radius: 10px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 1em;
         }
        
         .content {
@@ -70,9 +73,15 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
           right: 0;
           bottom: 0;
         }
+        .description {
+        text-align: center;
+        padding-right: 40px;
+
+      }
         html {
         scroll-behavior: smooth;
         }
+
       `,
     ];
   }

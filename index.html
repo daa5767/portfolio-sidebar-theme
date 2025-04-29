@@ -13,7 +13,7 @@
       </head>
       <body style="margin: 0;">
         <portfolio-sidebar-theme>
-          <portfolio-screen title="Who I am" id="who-i-am" image="profile.jpg"> 
+          <portfolio-screen title="Who I am" id="who-i-am" image="1728276955950.jpeg"> 
             <section class="container">
               <div class="introduction">
                 <div class="header">                    
@@ -21,19 +21,27 @@
                 </div>
                 <p class="description">
                   My background is in cybersecurity and analytics. I’m currently pursuing a bachelor's degree 
-                  at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, while focusing on Law and Policy.
-                  I'm passionate about defending systems and improving safety online.
+                  at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, 
+                  while focusing on Law and Policy. I'm passionate about defending systems and improving safety online.
                 </p>
               </div>
-              <img src="profile.jpg" alt="pic" class="profile-photo" />
+              <img src="1728276955950.jpeg" alt="pic" class="profile-photo" />
             </section>
           </portfolio-screen>
           
-          <portfolio-screen title="Skills" id="skills">
+          <portfolio-screen title="Resume" id="Resume">
             <section class="container">
               <div class="introduction">
-                <div class="header">                    
-                  <h2>My Skills</h2>
+                <div class="header">   
+                  <img 
+                  src="resume.png"
+                  alt="RESUME"
+                  class="resume-pdf"
+
+                  />
+
+
+                  <h2>Resume</h2>
                 </div>
                 <p class="description">
                   Proficient in Windows, Linux, Microsoft Office, Excel, LAN and WAN networking, JavaScript, Python, Bash scripting, 
@@ -43,6 +51,7 @@
                 </p>
               </div>
             </section>
+            <embed src="UPDATED RESUME.pdf" type="application/pdf" width="100%" height="600px">
           </portfolio-screen>
 
           <portfolio-screen title="Experience" id="experience">
@@ -84,14 +93,13 @@
         padding: 10px;
 
       }
-      .description {
-        text-align: center;
-        padding-right: 40px;
-
-      }
+    
       img {
-          max-width: 400px;
-          margin: auto;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1em;
         }
 
     </style>
