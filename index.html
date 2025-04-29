@@ -3,15 +3,71 @@
   <head>
     <base href="/" />
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <style>
+      :root,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        padding-right: 100px;
+        
+      }
+      .header {
+        margin-top: 0%;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+
+      }
+      .screen2-introduction {
+        display: flex;
+      }
+      .screen2-introduction p {
+        margin-top: 200px;
+      }
+      .img-resume {
+        width: 450px;
+        height: 600px;
+        margin-left: 100px;
+        border: 4px solid var(--ddd-theme-primary);
+      }
+    
+      .headshot {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 1em;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      iframe {
+      border: none;
+      width: 500px;
+      height: 600px;
+    }
+      .resume-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--ddd-spacing-4);
+        max-width: 1000px;
+        width: 100%;
+        padding-top: 100px;
+        margin-left: 20px;
+      }
+
+    </style>
       <title> My Portfolio</title>
-      <script type="module" src="./portfolio-sidebar-theme.js"></script>
-      <script type="module" src="./portfolio-screen.js"></script>
-      <script type="module" src="./portfolio-menu.js"></script>
       </head>
-      <body style="margin: 0;">
+      <body>
         <portfolio-sidebar-theme>
           <portfolio-screen title="Who I am" id="who-i-am" image="1728276955950.jpeg"> 
             <section class="container">
@@ -75,84 +131,9 @@
               <a href="https://www.linkedin.com/in/daniela-alarcon-psu" target="_blank">LinkedIn</a> | 
               <a href="https://github.com/daa5767" target="_blank">GitHub</a>
             </p>
-            
-  
-        
-          </portfolio-screen>
-      </body>
-      
-     
-    <meta
-      name="Description"
-      content="Demonstration for portfolio-sidebar-theme"
-    />
-
-    <style>
-      :root,
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 100vh;
-        padding-right: 100px;
-        
-      }
-      .header {
-        margin-top: 0%;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-
-      }
-      .screen2-introduction {
-        display: flex;
-      }
-      .screen2-introduction p {
-        margin-top: 200px;
-      }
-      .img-resume {
-        width: 450px;
-        height: 600px;
-        margin-left: 100px;
-        border: 4px solid var(--ddd-theme-primary);
-      }
-    
-      .headshot {
-        width: 400px;
-        height: 400px;
-        margin-bottom: 1em;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-      iframe {
-      border: none;
-      width: 500px;
-      height: 600px;
-    }
-      .resume-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--ddd-spacing-4);
-        max-width: 1000px;
-        width: 100%;
-        padding-top: 100px;
-        margin-left: 20px;
-      }
-
-    </style>
-    <title>portfolio-sidebar-theme</title>
-  </head>
-
-  <body>
-    
+            </section>
+      </portfolio-screen>
+    </portfolio-sidebar-theme>
     <script type="module" src="./portfolio-sidebar-theme.js"></script>
     <script type="module" src="./portfolio-menu.js"></script>
     <script type="module" src="./portfolio-screen.js"></script>
