@@ -100,10 +100,9 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   
       <div class="content" id="scroll-container">
         <slot></slot>
+        <scroll-button></scroll-button>
       </div>
-  
-      <scroll-button></scroll-button>
-    `;
+      `;
   }}
 
    globalThis.customElements.define(

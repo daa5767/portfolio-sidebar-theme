@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+import "@haxtheweb/scroll-button/scroll-button.js"
 
 class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
   static properties = {
@@ -13,7 +14,7 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
     super();
     this.sections = [
       { title: "Who I am" },
-      { title: "Skills" },
+      { title: "Resume" },
       { title: "Experience" },
       { title: "Contact" },
     ];
