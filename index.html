@@ -4,6 +4,8 @@
     <base href="/" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
     <style>
       :root,
       html,
@@ -17,27 +19,51 @@
         align-items: center;
         text-align: center;
         min-height: 100vh;
-        padding-right: 100px;
+        padding: 100px;
         
       }
       .header {
-        margin-top: 0%;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-
+       margin-bottom: 250px;
+       margin-left: 250px; 
+       width: calc(100% - 250px); 
+       font-family: 'Lora', serif;
+       background-color: var(--ddd-theme-default-limestoneGray);
+       color: #fff;
+       padding: 10px;
       }
+      .header h2 {
+       font-family: 'Lora', serif;
+       font-size: 40px;
+       font-weight: 500; 
+       margin: 0; 
+      }
+      .description {
+        margin-top: 0; 
+        font-size: 20px;
+        line-height: 1.6;
+        font-family: 'Lora', serif;
+        max-width: 500px;
+       }
+      
       .screen2-introduction {
         display: flex;
       }
-      .screen2-introduction p {
-        margin-top: 200px;
+     .screen2-introduction p {
+        margin-top: 300px;
       }
+      .screen2-header h2 {
+         margin-left: 160px; 
+       }
+       .screen2-header h2,
+       .screen2-introduction p 
+       {
+        font-family: 'Lora', serif;
+       }
       .img-resume {
         width: 450px;
         height: 600px;
-        margin-left: 100px;
+        margin-bottom: 200px;
+        margin-left: 150px;
         border: 4px solid var(--ddd-theme-primary);
       }
     
@@ -49,12 +75,14 @@
         border-radius: 50%;
       }
       iframe {
-      border: none;
-      width: 500px;
-      height: 600px;
+        border: none;
+        width: 100%;
+        max-width: 500px;
+        height: 600px;
     }
       .resume-content{
         display: flex;
+        font-family: 'Lora', serif;
         justify-content: space-between;
         align-items: center;
         padding: var(--ddd-spacing-4);
@@ -63,20 +91,35 @@
         padding-top: 100px;
         margin-left: 20px;
       }
+      .contact-section {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       min-height: 100vh;
+       padding: 50px 20px 100px 20px; 
+       margin-top: -50px;
+     }
+
+      .contact-info {
+      margin-top: 40px;
+    }
+
 
     </style>
       <title> My Portfolio</title>
       </head>
       <body>
         <portfolio-sidebar-theme>
-          <portfolio-screen title="Who I am" id="who-i-am" image="1728276955950.jpeg"> 
+          <portfolio-screen title="Who Am I" id="who-am-i" image="1728276955950.jpeg"> 
             <section class="container">
               <div class="introduction">
                 <div class="header">                    
                   <h2>Hello! My Name is Daniela Alarcon</h2>
                 </div>
                 <p class="description">
-                  My background is in Information Science's and Technology. I’m currently pursuing a bachelor's degree 
+                  My background is in Information Science's and Technology. I’m currently pursuing a B.S
                   at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, 
                   while focusing on Law and Policy. I'm passionate about defending systems and improving safety online.
                 </p>
@@ -97,7 +140,7 @@
 
 
                  
-                </div class="resume-content">
+                </div>
                 <p>
                   Motivated and detail-oriented undergraduate student pursuing a B.S. 
                   in Cybersecurity Analytics and Operations at The Pennsylvania State University, 
@@ -116,23 +159,24 @@
           </portfolio-screen>
           
           <portfolio-screen title="Contact" id="contact">
-            <section id="screen-5">
+            <section id="screen-5" class="contact-section">
               <h2>Let's Stay Connected!</h2>
               <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfdQELeBMuQJfJBP1-5ECtaGXiOh59qhDugwWQjZpXWMzxbog/viewform?embedded=true" 
-                    title="Contact Form">
-                    Loading…
-                  </iframe>" 
-              
-            <h2>Lets Stay Connected!</h2>
-            <p> Email:daa5767@psu.edu </p>
-             <p>Phone:347-935-9974</p>   
-             <p>
-              <a href="https://www.linkedin.com/in/daniela-alarcon-psu" target="_blank">LinkedIn</a> | 
-              <a href="https://github.com/daa5767" target="_blank">GitHub</a>
-            </p>
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfdQELeBMuQJfJBP1-5ECtaGXiOh59qhDugwWQjZpXWMzxbog/viewform?embedded=true" 
+                title="Contact Form">
+                Loading…
+              </iframe>
+          
+              <div class="contact-info">
+                <p>Email: daa5767@psu.edu</p>
+                <p>Phone: 347-935-9974</p>
+                <p>
+                  <a href="https://www.linkedin.com/in/daniela-alarcon-psu" target="_blank">LinkedIn</a> |
+                  <a href="https://github.com/daa5767" target="_blank">GitHub</a>
+                </p>
+              </div>
             </section>
-      </portfolio-screen>
+          </portfolio-screen>
     </portfolio-sidebar-theme>
     <script type="module" src="./portfolio-sidebar-theme.js"></script>
     <script type="module" src="./portfolio-menu.js"></script>

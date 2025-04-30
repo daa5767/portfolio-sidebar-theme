@@ -13,7 +13,7 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
   constructor() {
     super();
     this.sections = [
-      { title: "Who I am" },
+      { title: "Who Am I" },
       { title: "Resume" },
       { title: "Experience" },
       { title: "Contact" },
@@ -26,16 +26,6 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
     return [
       super.styles,
       css`
-        :host {
-          display: flex;
-          height: 100vh;
-        }
-
-        ::slotted(img) {
-          width: 300px;
-          float: right;
-        }
-
         a:visited,
         a:link {
           color: white;
@@ -52,27 +42,6 @@ class PortfolioScreen extends DDDSuper(I18NMixin(LitElement))  {
             --portfolio-sidebar-theme-label-font-size,
             var(--ddd-font-size-s)
           );
-        }
-        .profile-photo {
-          width: 200px;
-          border-radius: 10px;
-        }
-
-        .who-i-am {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 2rem;
-          padding: 2rem;
-        }
-        .intro-content {
-          flex: 1;
-          max-width: 600px;
-        }
-        .profile-photo {
-          width: 300px;
-          border-radius: 10px;
-          flex-shrink: 0;
         }
       `,
     ];

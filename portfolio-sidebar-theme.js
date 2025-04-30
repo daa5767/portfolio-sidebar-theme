@@ -22,7 +22,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.sections = [
-      { title: "Who I am" },
+      { title: "Who Am I" },
       { title: "Resume" },
       { title: "Experience" },
       { title: "Contact" },
@@ -50,12 +50,12 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
           margin: var(--ddd-spacing-2);
           padding: var(--ddd-spacing-4);
         }
-        h3 span {
+       h3 span {
           font-size: var(
             --portfolio-sidebar-theme-label-font-size,
             var(--ddd-font-size-s)
           );
-        }
+        } 
         .profile-photo {
           width: 200px;
           height: 200px;
@@ -64,19 +64,11 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
           margin-bottom: 1em;
         }
        
-        .content {
-          margin-left: 300px;
-        }
         scroll-button{
           position: fixed;
           right: 0;
           bottom: 0;
         }
-        .description {
-        text-align: center;
-        padding-right: 40px;
-
-      }
         html {
         scroll-behavior: smooth;
         }
@@ -97,7 +89,9 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         <!-- <img src="./profile.jpg" alt="Photo of Daniela Alarcon" /> -->
       </portfolio-menu>
   
-      <div class="content"></div>
+      <div class="content">
+
+      </div>
         <slot></slot>
         <scroll-button></scroll-button>
       </div>

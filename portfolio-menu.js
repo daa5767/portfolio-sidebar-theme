@@ -26,10 +26,9 @@ export class PortfolioMenu extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-        :host {
+         :host {
           display: flex;
           height: 100vh;
-          overflow-x: hidden;
         }
         .content {
           display: flex;
@@ -42,10 +41,6 @@ export class PortfolioMenu extends DDDSuper(I18NMixin(LitElement)) {
           height: 100vh;
           width: 15%;
           color: white;
-        }
-
-        img {
-          width: 100px;
         }
       `,
     ];
