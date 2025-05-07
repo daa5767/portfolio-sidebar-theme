@@ -7,25 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
     <style>
+       portfolio-screen {
+       display: block;
+        min-height: 100vh; 
+       padding: 50px 20px;
+       margin-left: 300px;
+      }
       :root,
       html,
       body {
         margin: 0;
         padding: 0;
       }
+
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        min-height: 100vh;
-        padding: 100px;
         
       }
+      .introduction {
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
       .header {
-       margin-bottom: 250px;
-       margin-left: 250px; 
-       width: calc(100% - 250px); 
        font-family: 'Lora', serif;
        background-color: var(--ddd-theme-default-limestoneGray);
        color: #fff;
@@ -38,33 +51,33 @@
        margin: 0; 
       }
       .description {
-        margin-top: 0; 
         font-size: 20px;
+        width: 50%;
         line-height: 1.6;
         font-family: 'Lora', serif;
-        max-width: 500px;
        }
       
       .screen2-introduction {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
-     .screen2-introduction p {
-        margin-top: 300px;
-      }
-      .screen2-header h2 {
-         margin-left: 160px; 
-       }
+
        .screen2-header h2,
        .screen2-introduction p 
        {
         font-family: 'Lora', serif;
        }
+       .screen2-header {
+        display: flex;
+        flex-direction: column;
+       }
       .img-resume {
-        width: 450px;
-        height: 600px;
-        margin-bottom: 200px;
-        margin-left: 150px;
-        border: 4px solid var(--ddd-theme-primary);
+        width: 400px;
+        /* margin-bottom: 400px; */
+        /* margin-left: 150px; */
+        /* border: 4px solid var(--ddd-theme-primary); */
       }
     
       .headshot {
@@ -105,6 +118,43 @@
       .contact-info {
       margin-top: 40px;
     }
+    .experience-section {
+     padding: 60px 20px;
+     font-family: 'Lora', serif;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     max-width: 900px;
+     margin: 0 auto;
+     min-height: 100vh;
+     box-sizing: border-box;
+    }
+
+    .experience-entry {
+     margin-bottom: 40px;
+     width: 100%;
+    }
+
+    .experience-entry h3 {
+     font-size: 22px;
+     margin: 10px 0 0;
+    } 
+
+    .experience-date {
+     font-style: italic;
+     font-size: 14px;
+     color: gray;
+     margin-bottom: 10px;
+    }
+
+    .experience-entry ul {
+     padding-left: 20px;
+     margin-top: 5px;
+     line-height: 1.6;
+    }
+
+  
+
 
 
     </style>
@@ -118,13 +168,16 @@
                 <div class="header">                    
                   <h2>Hello! My Name is Daniela Alarcon</h2>
                 </div>
-                <p class="description">
-                  My background is in Information Science's and Technology. I’m currently pursuing a B.S
-                  at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, 
-                  while focusing on Law and Policy. I'm passionate about defending systems and improving safety online.
-                </p>
+                <div class="content">
+                  <p class="description">
+                    My background is in Information Science's and Technology. I’m currently pursuing a B.S
+                    at The Pennsylvania State University in Cybersecurity with a minor in Security Risk Analysis, 
+                    while focusing on Law and Policy. I'm passionate about defending systems and improving safety online. Aside from 
+                    my technological background I engange in weight lifting and love the outdoors.
+                  </p>
+                  <img src="1728276955950.jpeg" alt="pic" class="profile-photo headshot" />
+                </div>
               </div>
-              <img src="1728276955950.jpeg" alt="pic" class="profile-photo headshot" />
             </section>
           </portfolio-screen>
           
@@ -137,26 +190,49 @@
                   src="resume.png"
                   alt="RESUME"
                   class="img-resume"/>
-
-
-                 
                 </div>
-                <p>
-                  Motivated and detail-oriented undergraduate student pursuing a B.S. 
-                  in Cybersecurity Analytics and Operations at The Pennsylvania State University, 
-                  with a minor in Security Risk Analysis. Experienced in implementing cybersecurity protocols,
-                   analyzing network traffic, and developing technical solutions through real-world internships
-                    and academic collaborations. Proven ability to lead projects, conduct risk assessments, and 
+                <div class="screen2-content">
+
+                  <p>
+                   A first generation motivated and detail oriented undergraduate student pursuing a B.S. 
+                    in Cybersecurity Analytics and Operations at The Pennsylvania State University, 
+                    with a minor in Security Risk Analysis. Experienced in implementing cybersecurity protocols,
+                    analyzing network traffic, and developing technical solutions through real world internships
+                    and academic collaborations. I've proven the ability to lead projects, conduct risk assessments, and 
                     contribute to secure system development. Bilingual in English and Spanish, with technical proficiency
-                     in Windows, Linux, Python, Wireshark, and MySQL.
-                </p>
+                    in Windows, Linux, Python, Wireshark, and MySQL.
+                  </p>
+                </div>
               </div>
             </section>
           </portfolio-screen>
 
           <portfolio-screen title="Experience" id="experience">
-            <p>This is my experience.</p>
+            <section class="experience-section">
+              <h2>Professional Experience</h2>
+          
+              <div class="experience-entry">
+                <h3>IT Intern – Excellence Community Schools</h3>
+                <p class="experience-date">May 2024 – August 2024</p>
+                <ul>
+                  <li>Conducted network vulnerability scans and reported security risks to senior engineers.</li>
+                  <li>Assisted in implementing endpoint security solutions for 100+ workstations.</li>
+                  <li>Participated in weekly risk assessment meetings and policy development workshops.</li>
+                </ul>
+              </div>
+          
+              <div class="experience-entry">
+                <h3>Front Desk Assistant – Excellence Community Schools</h3>
+                <p class="experience-date">September 2023 – Present</p>
+                <ul>
+                  <li>Provided tech support for hardware, software, and network-related issues to students and faculty.</li>
+                  <li>Logged and tracked tickets using ServiceNow and resolved 90% within SLA timeframes.</li>
+                </ul>
+              </div>
+              
+            </section>
           </portfolio-screen>
+          
           
           <portfolio-screen title="Contact" id="contact">
             <section id="screen-5" class="contact-section">
